@@ -6,7 +6,7 @@ import os
 from openai import OpenAI
 
 client = OpenAI(
-    base_url = "http://localhost:32434",
+    base_url = "http://localhost:31434",
     api_key = os.environ["ollama"],
 )
 

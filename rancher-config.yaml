@@ -11,5 +11,4 @@ spec:
     authSecretName: application-collection
   branch: main
   paths:
-  - k8s-assistant/suseai
-  - k8s-assistant/mcpo
+  - k8s-assistant
