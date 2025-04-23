@@ -11,7 +11,10 @@ specs:
   models:
     pull:
       - "qwen2.5:1.5b"
-  defaultModel: "qwen2.5:1.5b"
+      - "granite3.3:2b"
+    run:
+      - "qwen2.5:1.5b"
+      - "granite3.3:2b"
 ingress:
   enabled: false
 service:
