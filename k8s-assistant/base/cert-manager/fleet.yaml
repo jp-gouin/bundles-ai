@@ -1,4 +1,4 @@
-namespace: cert-manager
+defaultNamespace: cert-manager
 
 # Custom helm options
 helm:
@@ -9,6 +9,6 @@ helm:
   version: "1.17.1"
   values:
     installCRDs: false
-
+  releaseName: cert-manager
 labels:
   app: cert-manager
