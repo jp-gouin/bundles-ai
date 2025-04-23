@@ -4,27 +4,14 @@ global:
 
 specs:
   image:
-    registry: dp.apps.rancher.io
-    repository: containers/ollama
-    tag: 0.6.2
+    # registry: dp.apps.rancher.io
+    repository: ollama/ollama
     pullPolicy: IfNotPresent
-    lifecycle:
-      postStart:
-        exec:
-          command:
-            - /bin/sh
-            - -c
-            - |
-                for i in $(seq 10); do
-                  ollama ps && break
-                  sleep 1
-                done
-                for model in qwen2.5:1.5b; do
-                  ollama pull "$model"
-                done
-                for model in granite3.3:2b; do
-                  ollama pull "$model"
-                done
+    models:
+      pull:
+        - "qwen2.5:1.5b"
+        - "granite3.3:2b"
+
 ingress:
   enabled: false
 service:
