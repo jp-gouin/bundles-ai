@@ -4,8 +4,9 @@ global:
 
 specs:
   image:
-    repository: ollama/ollama
-    tag: 0.6.5
+    registry: dp.apps.rancher.io
+    repository: containers/ollama
+    tag: 0.6.2
     pullPolicy: IfNotPresent
   models:
     pull:
@@ -17,11 +18,7 @@ specs:
 ingress:
   enabled: false
 service:
-  type: ClusterIP
-  annotations: {}
-  port: 80
-  containerPort: 8080
-  labels: {}
-  loadBalancerClass: ""
+  type: NodePort
+  nodePort: 31434
 persistentVolume:
   storageClass: local-path
