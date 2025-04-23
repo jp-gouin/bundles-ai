@@ -1,0 +1,30 @@
+global:
+  imagePullSecrets:
+  - application-collection
+  ollama:
+  models:
+    pull:
+      - "qwen2.5:1.5b"
+    insecure: false
+specs:
+  image:
+    registry: dp.apps.rancher.io
+    repository: containers/ollama
+    tag: 0.6.2
+    pullPolicy: IfNotPresent
+  defaultModel: "qwen2.5:1.5b"
+  models:
+    pull:
+      - "qwen2.5:1.5b"
+ingress:
+  enabled: false
+service:
+  type: NodePort
+  annotations: {}
+  port: 80
+  containerPort: 8080
+  nodePort: 32434
+  labels: {}
+  loadBalancerClass: ""
+persistentVolume:
+  storageClass: local-path
