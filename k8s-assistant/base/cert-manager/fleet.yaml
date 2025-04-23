@@ -9,5 +9,6 @@ helm:
   version: "1.17.1"
   values:
     installCRDs: true
+  releaseName: cert-manager
 labels:
   app: cert-manager

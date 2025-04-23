@@ -12,4 +12,4 @@ spec:
   branch: main
   paths:
   - k8s-assistant/base/cert-manager
-  # - k8s-assistant/suseai
+  - k8s-assistant/suseai
