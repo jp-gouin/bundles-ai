@@ -1,4 +1,4 @@
-defaultNamespace: cert-manager
+namespace: cert-manager
 
 # Custom helm options
 helm:
@@ -8,7 +8,7 @@ helm:
   chart: "oci://dp.apps.rancher.io/charts/cert-manager"
   version: "1.17.1"
   values:
-    installCRDs: true
+    installCRDs: false
 
 labels:
   app: cert-manager
