@@ -18,11 +18,10 @@ specs:
 ingress:
   enabled: false
 service:
-  type: NodePort
+  type: ClusterIP
   annotations: {}
   port: 80
   containerPort: 8080
-  nodePort: 32434
   labels: {}
   loadBalancerClass: ""
 persistentVolume:
