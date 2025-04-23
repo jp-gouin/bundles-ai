@@ -11,5 +11,4 @@ spec:
     authSecretName: application-collection
   branch: main
   paths:
-  - k8s-assistant/base/cert-manager
   - k8s-assistant/suseai
