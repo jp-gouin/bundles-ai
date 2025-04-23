@@ -11,7 +11,4 @@ helm:
     extraArgs:
       - 'global.imagePullSecrets[0].name"="application-collection'
     installCRDs: true
-
-  valuesFiles:
-    - milvus-values.yaml
   

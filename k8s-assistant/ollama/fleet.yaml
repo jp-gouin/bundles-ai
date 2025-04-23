@@ -11,6 +11,8 @@ helm:
  
   valuesFiles:
     - ollama-values.yaml
+  dependsOn:
+    - cert-manager
 
 
   

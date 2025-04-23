@@ -10,4 +10,6 @@ helm:
 
   valuesFiles:
     - milvus-values.yaml
+  dependsOn:
+    - cert-manager
   

@@ -54,7 +54,7 @@ kubectl create secret docker-registry application-collection \
 
 ## Use Rancher Application Collection for components
 
-### Deploy cert-manager helm chart
+<!-- ### Deploy cert-manager helm chart
 
 ```SHELL
 helm upgrade --install cert-manager \
@@ -64,7 +64,7 @@ helm upgrade --install cert-manager \
   --create-namespace \
   --set crds.enabled=true \
   --set "global.imagePullSecrets[0].name"="application-collection"
-```
+``` -->
 
 ### Deploy Rancher Fleet
 First let's add the repo if not yet there

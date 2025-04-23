@@ -9,5 +9,10 @@ helm:
   version: "5.16.0"  
   valuesFiles:
     - owui-values.yaml
+  dependsOn:
+    - cert-manager
+    - milvus
+    - ollama
+ 
 
   
