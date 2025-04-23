@@ -1,0 +1,17 @@
+namespace: suseai
+
+# Custom helm options
+helm:
+  helmSecretName: basic-auth-secret
+  ociRegistry:
+    authSecretName: application-collection
+  chart: "oci://dp.apps.rancher.io/charts/cert-manager"
+  version: "1.17.1"
+  values:
+    extraArgs:
+      - 'global.imagePullSecrets[0].name"="application-collection'
+    installCRDs: true
+
+  valuesFiles:
+    - milvus-values.yaml
+  
