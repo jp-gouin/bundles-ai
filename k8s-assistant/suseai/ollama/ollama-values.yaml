@@ -22,6 +22,9 @@ specs:
                 for model in qwen2.5:1.5b; do
                   ollama pull "$model"
                 done
+                for model in granite3.3:2b; do
+                  ollama pull "$model"
+                done
 ingress:
   enabled: false
 service:
