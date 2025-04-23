@@ -8,13 +8,20 @@ specs:
     repository: containers/ollama
     tag: 0.6.2
     pullPolicy: IfNotPresent
-  models:
-    pull:
-      - "qwen2.5:1.5b"
-      - "granite3.3:2b"
-    run:
-      - "qwen2.5:1.5b"
-      - "granite3.3:2b"
+    lifecycle:
+      postStart:
+        exec:
+          command:
+            - /bin/sh
+            - -c
+            - |
+                for i in $(seq 10); do
+                  ollama ps && break
+                  sleep 1
+                done
+                for model in qwen2.5:1.5b; do
+                  ollama pull "$model"
+                done
 ingress:
   enabled: false
 service:
