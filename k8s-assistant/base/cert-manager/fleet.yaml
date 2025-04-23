@@ -11,6 +11,5 @@ helm:
     installCRDs: true
     extraArgs:
       - --set="global.imagePullSecrets[0].name"="application-collection"
-  releaseName: cert-manager
 labels:
   app: cert-manager
