@@ -8,7 +8,9 @@ helm:
   chart: "oci://dp.apps.rancher.io/charts/cert-manager"
   version: "1.17.1"
   values:
-    installCRDs: false
+    installCRDs: true
+    extraArgs:
+      - --set="global.imagePullSecrets[0].name"="application-collection"
   releaseName: cert-manager
 labels:
   app: cert-manager
