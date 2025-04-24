@@ -5,6 +5,8 @@
 *Rev. Number:* v1.0
 
 SUSE AI Demo enviroment is a simple document that is intended to describe how to implement a local lab to demonstrate capabilites of SUSE AI in the context of specific usecase
+If you are interested in understanding more what is SUSE AI please refer to [http://suse.com/products/ai](http://suse.com/products/ai)
+
 This GreenDoc is structured in the following way:
 
 * Cluster setup
