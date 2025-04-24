@@ -12,3 +12,16 @@ spec:
   branch: main
   paths:
   - k8s-assistant/suseai
+---
+metadata:
+  name: suseai
+  # This namespace is special and auto-wired to deploy to the local cluster
+  namespace: fleet-local
+spec:
+  repo: https://github.com/alessandro-festa/bundles
+  helmSecretName: basic-auth-secret
+  ociRegistry:
+    authSecretName: application-collection
+  branch: main
+  paths:
+  - k8s-assistant/mcpo
