@@ -21,5 +21,4 @@ ollama:
   # -- List of models to pull at container startup
   models:
     pull:
-      - qwen2.5:1.5b
-      - granite3.3:2b
+      - qwen2.5:3b-instruct
