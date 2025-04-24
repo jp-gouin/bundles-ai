@@ -110,6 +110,77 @@ Now let's execute the config with kubectl
 ```SHELL
 kubectl apply -f rancher-config.yaml
 ```
-You should have the SUSE AI stack
+You should have the SUSE AI stack plus an mcpo server installed.
+We used as example the kubernetes mcp server from https://github.com/Flux159/mcp-server-kubernetes
+
+
+Let's check that!
+
+# Checkin MCPO Server
+
+Open a browser and go to [http://localhost:8000](http://localhost:8000) you should see an image similar to the one below
+
+![MCP Server main page](images/mcp01.png)
+
+Click on the `kubernetes` you should see a similar page
+
+![MCP K8s page](images/mcp02.png)
+
+Let's authorize and try a simple query
+Click on the Authorize button and type `top-secret`as token
+
+![MCP Authorization](images/mcp03.png)
+
+Now let's move to a test like get node informations. Use the `try out` option and check the results.
+
+![MCP Results](images/mcp04.png)
+
+It works!
+
+# Configure Open-WebUI
+We now need to configure OWUI to use the MCP server.
+Last release of OWUI has a new feature names "Tools Servers".
+
+Let's open the admin settings
+
+![OWUI Admin Settings](images/owui01.png)
+
+Move to Tools
+
+![OWUI Tools Settings](images/owui2.png)
+![OWUI Tools Settings](images/owui3.png)
+
+Add the mcp server connection
+`http://mcp-service.suseai.svc.cluster.local:8000/kubernetes``
+![OWUI Tools Configuration](images/owui4.png)
+
+if everything goes right you shouild see a succesfull message
+
+![OWUI Tools Settings](images/owui5.png)
+
+Now let's configure the model to use the tool
+
+First move to models and select the model you want to use with through the pen icon. Second check two parameters as per images below
+
+![OWUI Tools Settings](images/owui7.png)
+
+Switch `Function Calling` to `native``
+
+![OWUI Tools Settings](images/owui8.png)
+
+And finally select the `tool``
+
+![OWUI Tools Settings](images/owui9.png)
+
+Click save and try it ... you should see a tool in the chat (see the number 1 in the picture?)
+
+![OWUI Tools Settings](images/owui10.png)
+
+Ask something  like "list the pods in the namespace suseai"
+
+without and with the tool check the difference!
+![OWUI Tools Settings](images/owui11.png)
+
+![OWUI Tools Settings](images/owui12.png)
 
 
