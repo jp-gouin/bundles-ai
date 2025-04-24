@@ -13,6 +13,8 @@ spec:
   paths:
   - k8s-assistant/suseai
 ---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: GitRepo
 metadata:
   name: suseai
   # This namespace is special and auto-wired to deploy to the local cluster
