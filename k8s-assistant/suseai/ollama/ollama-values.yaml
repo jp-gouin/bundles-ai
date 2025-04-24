@@ -4,10 +4,9 @@ global:
 
 specs:
   image:
-    # registry: dp.apps.rancher.io
-    # repository: containers/ollama
-    # tag: 0.6.2
-    repository: ollama/ollama
+    registry: dp.apps.rancher.io
+    repository: containers/ollama
+    tag: 0.6.2
     pullPolicy: IfNotPresent
 
 ingress:
