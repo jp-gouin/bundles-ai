@@ -36,7 +36,7 @@ kubectl create namespace suseai
 ```SHELL
 kubectl create secret docker-registry application-collection \
 --docker-server=dp.apps.rancher.io \
---docker-username=alessandro.festa1@suse.com \
+--docker-username=<your registered account on appco> \
 --docker-password=<INSERT YOUR TOKEN FROM APPCO> \
 -n cert-manager
 ```
@@ -44,14 +44,14 @@ kubectl create secret docker-registry application-collection \
 ```SHELL
 kubectl create secret docker-registry application-collection \
 --docker-server=dp.apps.rancher.io \
---docker-username=alessandro.festa1@suse.com \
+--docker-username=<your registered account on appco>\
 --docker-password=<INSERT YOUR TOKEN FROM APPCO> \
 -n suseai
 ```
 ```SHELL
 kubectl create secret docker-registry application-collection \
 --docker-server=dp.apps.rancher.io \
---docker-username=alessandro.festa1@suse.com \
+--docker-username=<your registered account on appco> \
 --docker-password=<INSERT YOUR TOKEN FROM APPCO> \
 -n fleet-local
 ```
@@ -105,7 +105,7 @@ spec:
 and add a generic secret for basic authentication
 
 ```SHELL
-kubectl create secret generic basic-auth-secret \--from-literal=username=alessandro.festa1@suse.com \
+kubectl create secret generic basic-auth-secret \--from-literal=username=<your registered account on appco> \
 --from-literal=password=<INSERT YOUR TOKEN FROM APPCO> \
 -n fleet-local
 ```
