@@ -7,7 +7,7 @@
 SUSE AI Demo enviroment is a simple document that is intended to describe how to implement a local lab to demonstrate capabilites of SUSE AI in the context of specific usecase
 If you are interested in understanding more what is SUSE AI please refer to [http://suse.com/products/ai](http://suse.com/products/ai)
 
-The applications in this repo are pulled from the Rancher Prime Application Collection [https://apps.rancher.io/](https://apps.rancher.io/) check the documentation at [https://docs.apps.rancher.io/](https://docs.apps.rancher.io/) to learn more about AppCo
+The applications in this repo are pulled from the SUSE Application Collection [https://apps.rancher.io/](https://apps.rancher.io/) check the documentation at [https://docs.apps.rancher.io/](https://docs.apps.rancher.io/) to learn more about AppCo
 
 This GreenDoc is structured in the following way:
 
