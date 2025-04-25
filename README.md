@@ -115,7 +115,7 @@ Now let's execute the config with kubectl
 kubectl apply -f rancher-config.yaml
 ```
 You should have the SUSE AI stack plus an mcpo server installed.
-We used as example the kubernetes mcp server from https://github.com/Flux159/mcp-server-kubernetes
+We used as example the kubernetes mcp server from [https://github.com/manusa/kubernetes-mcp-server](https://github.com/manusa/kubernetes-mcp-server)
 
 
 Let's check that!
